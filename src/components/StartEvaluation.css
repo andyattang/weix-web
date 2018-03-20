@@ -1,0 +1,6 @@
+.welcome {
+  height: 100%;
+  width: 100%;
+  textAlign: 'center';
+  background: #40B0BB url(../assets/bubble2.gif) no-repeat center 0;
+}
