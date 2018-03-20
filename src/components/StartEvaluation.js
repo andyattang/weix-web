@@ -4,9 +4,8 @@ import styles from './StartEvaluation.css';
 
 const StartEvaluation = () => {
   return (
-   <div style={{ height: '100%', textAlign: 'center' ,
-   background: '#40B0BB url(../assets/bubble2.gif) no-repeat center 0'}}>
-     <Button>开始评测</Button>
+   <div className={styles.welcome}>
+     <a href="/#/evaluate">开始评测</a>
    </div>
   );
 };

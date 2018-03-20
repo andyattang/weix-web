@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 import { TabBar } from 'antd-mobile';
 import StartEvaluation from './StartEvaluation';
+import Evaluation from './Evaluation';
 import styles from './MainLayout.css';
 
 class MainLayout extends React.Component {
@@ -9,7 +10,8 @@ class MainLayout extends React.Component {
     super(props);
     this.state = {
       selectedTab: 'evlTab',
-      hidden: false
+      hidden: false,
+      location: props.location?props.location:'idx',
     };
   }
 
@@ -41,6 +43,13 @@ class MainLayout extends React.Component {
     );
   }
 
+  renderEval() {
+    return this.state.location === 'idx'?(
+      <StartEvaluation></StartEvaluation>
+    ):(
+      <Evaluation></Evaluation>
+    );
+  }
 
   render() {
     return (
@@ -76,7 +85,7 @@ class MainLayout extends React.Component {
             }}
             data-seed="logId1"
             >
-            <StartEvaluation></StartEvaluation>
+            {this.renderEval()}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -108,7 +117,7 @@ class MainLayout extends React.Component {
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
             selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
-            title="My"
+            title="个人中心"
             key="my"
             selected={this.state.selectedTab === 'myTab'}
             onPress={() => {

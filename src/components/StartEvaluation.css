@@ -1,6 +1,94 @@
 .welcome {
   height: 100%;
   width: 100%;
-  textAlign: 'center';
-  background: #40B0BB url(../assets/bubble2.gif) no-repeat center 0;
+  padding-top: 400px;
+  text-align: center;
+  background: #40B0BB url(../assets/bubble2.gif) no-repeat center 100px;
+}
+
+
+.welcome a{
+  text-decoration:none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size:1.5em;
+  color:#228DFF;
+}
+.welcome a:hover{
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+  color:#ffffff;
+}
+
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff,
+    0 0 20px  #fff,
+    0 0 30px  #fff,
+    0 0 40px  #228DFF,
+    0 0 70px  #228DFF,
+    0 0 80px  #228DFF,
+    0 0 100px #228DFF,
+    0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #228DFF,
+    0 0 35px #228DFF,
+    0 0 40px #228DFF,
+    0 0 50px #228DFF,
+    0 0 75px #228DFF;
+  }
+}
+
+
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff,
+    0 0 20px  #fff,
+    0 0 30px  #fff,
+    0 0 40px  #228DFF,
+    0 0 70px  #228DFF,
+    0 0 80px  #228DFF,
+    0 0 100px #228DFF,
+    0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #228DFF,
+    0 0 35px #228DFF,
+    0 0 40px #228DFF,
+    0 0 50px #228DFF,
+    0 0 75px #228DFF;
+  }
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff,
+    0 0 20px  #fff,
+    0 0 30px  #fff,
+    0 0 40px  #228DFF,
+    0 0 70px  #228DFF,
+    0 0 80px  #228DFF,
+    0 0 100px #228DFF,
+    0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #228DFF,
+    0 0 35px #228DFF,
+    0 0 40px #228DFF,
+    0 0 50px #228DFF,
+    0 0 75px #228DFF;
+  }
 }

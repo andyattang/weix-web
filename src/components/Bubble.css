@@ -1,9 +1,27 @@
+.icon{
+  max-width: 80%;
+  position: relative;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 7px;
+  margin-top: 15px;
+  padding-right: 10px;
+  display: inline-block;
+  float: left;
+  width: 30px;
+  height:30px;
+  background: url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  29px 29px no-repeat;
+}
+
 .bubbleDiv{
     width: 100%;
     margin: 0 auto;
     height: 100%;
     border: 1px solid #4a4f58;
 }
+
 .bubbleItem{
     width: 100%;
 }
@@ -21,47 +39,52 @@
 }
 .leftBubble{
     position: relative;
-    margin-left: 25px;
-    border: 1px solid #00b6b6;
-    background-color: #f8fdfc;
+    margin-left: 15px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+	  font-size:1.3em;
+	  color:#000000;
 }
 .leftBubble .bottomLevel{
     position: absolute;
     top: 10px;
     left: -10px;
-    border-top: 10px solid #00b6b6;
+    border-top: 10px solid #ffffff;
     border-left: 10px solid transparent;
 }
 .leftBubble .topLevel{
     position: absolute;
     top: 11px;
     left: -8px;
-    border-top: 10px solid #f8fdfc;
+    border-top: 10px solid #ffffff;
     border-left: 10px solid transparent;
-    z-index: 100;
+    z-index: 1;
 }
 .rightBubble{
     position: relative;
     margin-right: 25px;
     float: right;
-    border: 1px solid #aaa;
+    border: 1px solid #6f6f6f;
+    background-color: #6f6f6f;
+	  font-size:1.3em;
+    color:#ffffff;
 }
 .rightBubble .bottomLevel{
     position: absolute;
     bottom: 11px;
     right: -10px;
-    border-bottom: 10px solid #aaa;
+    border-bottom: 10px solid #6f6f6f;
     border-right: 10px solid transparent;
 }
 .rightBubble .topLevel{
     position: absolute;
     bottom: 12px;
     right: -8px;
-    border-bottom: 10px solid #fff;
+    border-bottom: 10px solid #6f6f6f;
     border-right: 10px solid transparent;
-    z-index: 100;
+    z-index: 1;
 }
-.clearfix:after {
+.clearfix {
     visibility: hidden;
     display: block;
     font-size: 0;
