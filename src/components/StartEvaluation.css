@@ -1,9 +1,11 @@
 .welcome {
+  position: absolute;
+  top:0;
   height: 100%;
   width: 100%;
-  padding-top: 400px;
+  padding-top: 300px;
   text-align: center;
-  background: #40B0BB url(../assets/bubble2.gif) no-repeat center 100px;
+  background: #40B0BB url(../assets/bubble2.gif) no-repeat center 0;
 }
 
 

@@ -10,22 +10,22 @@ const questions = [
 ];
 
 const scrollToBottom = () => {
-  let box = $('#evalBox');
+  let box = $('.am-tabs-pane-wrap-active');
   box.animate({scrollTop: box.get(0).scrollHeight}, 1000);
+  $('#maskLayer').height($('#answeredDiv').height()+10);
 };
 
 const StartEvaluation = () => {
   return (
-    <div className={styles.main}>
+    <div id="evalBox" className={styles.main}>
       <div className={styles.main} onClick={(e) => {
          e.preventDefault();
          scrollToBottom();
        }}>
         <Progress percent={30} position="fixed"/>
-
-        <div className={styles.maskLayer}></div>
-        <div id="evalBox" className={styles.eval}>
-          <div className={styles.answeredBubbleDiv}>
+        <div className={styles.eval}>
+          <div id="maskLayer" className={styles.maskLayer}></div>
+          <div id="answeredDiv" className={styles.answeredBubbleDiv}>
             <LeftBubble message={questions[0]}/>
             <RightBubble message="有差异"/>
             <LeftBubble message={questions[1]}/>

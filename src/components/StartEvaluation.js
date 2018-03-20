@@ -5,7 +5,7 @@ import styles from './StartEvaluation.css';
 const StartEvaluation = () => {
   return (
    <div className={styles.welcome}>
-     <a href="/#/evaluate">开始评测</a>
+     <a href="/#/evaluate">智能开启</a>
    </div>
   );
 };

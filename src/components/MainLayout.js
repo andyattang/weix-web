@@ -17,7 +17,7 @@ class MainLayout extends React.Component {
 
   renderContent(pageText) {
     return (
-      <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
+      <div style={{ position: 'absolute',top:0, backgroundColor: 'white', width: '100%',height: '100%', textAlign: 'center' }}>
         <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
         <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
            onClick={(e) => {
@@ -142,4 +142,4 @@ function mapStateToProps(state) {
   return state.MainLayout;
 }
 
-export default connect(mapStateToProps)(MainLayout);
+export default connect()(MainLayout);

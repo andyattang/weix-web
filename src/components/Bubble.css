@@ -64,8 +64,8 @@
     position: relative;
     margin-right: 25px;
     float: right;
-    border: 1px solid #6f6f6f;
-    background-color: #6f6f6f;
+    border: 1px solid #4f4f4f;
+    background-color: #4f4f4f;
 	  font-size:1.3em;
     color:#ffffff;
 }
@@ -73,14 +73,14 @@
     position: absolute;
     bottom: 11px;
     right: -10px;
-    border-bottom: 10px solid #6f6f6f;
+    border-bottom: 10px solid #4f4f4f;
     border-right: 10px solid transparent;
 }
 .rightBubble .topLevel{
     position: absolute;
     bottom: 12px;
     right: -8px;
-    border-bottom: 10px solid #6f6f6f;
+    border-bottom: 10px solid #4f4f4f;
     border-right: 10px solid transparent;
     z-index: 1;
 }
