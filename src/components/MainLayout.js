@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import { TabBar } from 'antd-mobile';
 import StartEvaluation from './StartEvaluation';
 import Evaluation from './Evaluation';
+import SelectFriend from './SelectFriend';
 import styles from './MainLayout.css';
 
 class MainLayout extends React.Component {
@@ -116,7 +117,7 @@ class MainLayout extends React.Component {
               });
             }}
           >
-            {this.renderContent('关系测试')}
+            <SelectFriend/>
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
