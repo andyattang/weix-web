@@ -1,0 +1,27 @@
+.circleIcon {
+    margin: 10px 5px;
+    overflow: hidden;
+}
+
+.list_ul figcaption p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.circleIcon figure div {
+    display: inline-block;
+    margin: 5px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(11, 13, 131);
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+}
+
+.circleIcon img {
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+}

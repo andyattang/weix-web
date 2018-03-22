@@ -4,7 +4,7 @@ import MainLayout from '../components/MainLayout';
 
 function EvaluatePage() {
   return (
-    <MainLayout location="eval"></MainLayout>
+    <MainLayout target="evlTab" location="eval"></MainLayout>
   );
 }
 
