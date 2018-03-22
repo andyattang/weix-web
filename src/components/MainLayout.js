@@ -93,6 +93,7 @@ class MainLayout extends React.Component {
             onPress={() => {
               this.setState({
                 selectedTab: 'evlTab',
+                location: 'idx',
               });
             }}
             data-seed="logId1"
@@ -123,6 +124,7 @@ class MainLayout extends React.Component {
             onPress={() => {
               this.setState({
                 selectedTab: 'friendTab',
+                location: 'idx',
               });
             }}
           >
