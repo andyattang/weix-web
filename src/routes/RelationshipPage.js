@@ -4,7 +4,7 @@ import MainLayout from '../components/MainLayout';
 
 function RelationshipPage() {
   return (
-    <MainLayout location="friend"></MainLayout>
+    <MainLayout target="friendTab" location="idx"></MainLayout>
   );
 }
 

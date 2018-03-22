@@ -5,12 +5,13 @@ import StartEvaluation from './StartEvaluation';
 import Evaluation from './Evaluation';
 import SelectFriend from './SelectFriend';
 import styles from './MainLayout.css';
+import Relationship from './Relationship';
 
 class MainLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'evlTab',
+      selectedTab: props.target ? props.target : 'evlTab',
       hidden: false,
       location: props.location ? props.location : 'idx',
     };
@@ -49,6 +50,14 @@ class MainLayout extends React.Component {
       <StartEvaluation></StartEvaluation>
     ) : (
         <Evaluation></Evaluation>
+      );
+  }
+
+  renderRelationship() {
+    return this.state.location === 'idx' ? (
+      <Relationship></Relationship>
+    ) : (
+        <SelectFriend></SelectFriend>
       );
   }
 
@@ -117,7 +126,7 @@ class MainLayout extends React.Component {
               });
             }}
           >
-            <SelectFriend/>
+            {this.renderRelationship()}
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}

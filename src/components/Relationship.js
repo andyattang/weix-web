@@ -12,11 +12,13 @@ const selectFriend = () => {
 const Relationship = () => {
     return (
         <div id="relationBox" className={styles.main}>
-            <div class={styles.me}>
-                <CircleIcon src="/static/person.png"></CircleIcon>
-            </div>
-            <div class={styles.friend}>
-                <CircleIcon src="/static/person-add.png"></CircleIcon>
+            <div class={styles.center}>
+                <div class={styles.me}>
+                    <CircleIcon src="/static/person.png"></CircleIcon>
+                </div>
+                <div class={styles.friend}>
+                    <a href="/#/friend"><CircleIcon src="/static/person-add.png"></CircleIcon></a>
+                </div>
             </div>
         </div>
     );
