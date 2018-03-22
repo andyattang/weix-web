@@ -44,7 +44,7 @@ class SelectFriend extends React.Component {
           wrapProps={{ onTouchStart: this.onWrapTouchStart }}
         >
           <div>
-            你还没有通过评测，评测完成后才可添加好友哟~
+            你还没有通过评测，完成后才可添加好友哟~
           </div>
         </Modal>
         <WhiteSpace />

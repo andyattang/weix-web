@@ -5,6 +5,7 @@ import StartEvaluation from './StartEvaluation';
 import Evaluation from './Evaluation';
 import SelectFriend from './SelectFriend';
 import styles from './MainLayout.css';
+import BigBox from './BigBox';
 
 class MainLayout extends React.Component {
   constructor(props) {
@@ -88,7 +89,8 @@ class MainLayout extends React.Component {
             }}
             data-seed="logId1"
           >
-            {this.renderEval()}
+           <BigBox></BigBox>
+            {/*this.renderEval()*/}
           </TabBar.Item>
           <TabBar.Item
             icon={

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>零度</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+   *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: #222222;
+    }
+    #box{
+        width: 600px;
+        margin: 20px auto;
+        text-align: center;
+        
+    }
+    #content{
+        background-color: #FF9C01;
+        height: 150px;
+        overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    }
+    h4,p{
+        padding: 10px 0;
+    }
+    #btn{
+        width: 80px;
+    }
+  </style>
+  <script src="jquery-3.3.1.min.js"></script>
+  
+</head>
+
+<body>
+  <div id="box">
+    <div id="content">
+        <h4>手机</h4>
+        <div
+        title="双宽带+无线WiFi 网速升3倍 WiFi手机设置无线上网的方法">
+        双宽带+无线WiFi 网速升3倍 WiFi手机设置无线上网的方法
+        价格:1499 2999 3999 5999 6999
+            魅族 note5 小米 华为 OPPO
+            超长待机 防水 1080高清屏 双宽带+无线WiFi 网速升3倍 WiFi手机设置无线上网的方法
+            价格:1499 2999 3999 5999 6999
+                魅族 note5 小米 华为 OPPO
+                超长待机 防水 1080高清屏双宽带+无线WiFi 网速升3倍 WiFi手机设置无线上网的方法
+                价格:1499 2999 3999 5999 6999<br/>
+                    魅族 note5 小米 华为 OPPO
+                    超长待机 防水 1080高清屏双宽带+无线WiFi 网速升3倍 WiFi手机设置无线上网的方法
+                    价格:1499 2999 3999 5999 6999
+                        魅族 note5 小米 华为 OPPO
+                        超长待机 防水 1080高清屏双宽带+无线WiFi 网速升3倍 WiFi手机设置无线上网的方法
+                        价格:1499 2999 3999 5999 6999
+                            魅族 note5 小米 华为 OPPO
+                            超长待机 防水 1080高清屏
+        </div>
+    </div>
+    <button id="btn">展开</button>
+</div>
+<script>
+  var btn = $('#btn')
+  var spread = $('#content')
+  btn.click(function () {
+      spread.animate( {height:'50px'}, 1000);
+
+  })
+</script>
+</body>
+
+</html>
