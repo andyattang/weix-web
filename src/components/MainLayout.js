@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { TabBar } from 'antd-mobile';
+import { TabBar, NavBar } from 'antd-mobile';
 import StartEvaluation from './StartEvaluation';
 import Evaluation from './Evaluation';
 import SelectFriend from './SelectFriend';
 import styles from './MainLayout.css';
-import BigBox from './BigBox';
+import EvaluationResult from './EvaluationResult';
 import Relationship from './Relationship';
+import PersonCenter from './PersonCenter';
 
 class MainLayout extends React.Component {
   constructor(props) {
@@ -18,33 +19,6 @@ class MainLayout extends React.Component {
     };
   }
 
-  renderContent(pageText) {
-    return (
-      <div style={{ position: 'absolute', top: 0, backgroundColor: 'white', width: '100%', height: '100%', textAlign: 'center' }}>
-        <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
-        <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
-          onClick={(e) => {
-            e.preventDefault();
-            this.setState({
-              hidden: !this.state.hidden,
-            });
-          }}
-        >
-          Click to show/hide tab-bar
-        </a>
-        <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
-          onClick={(e) => {
-            e.preventDefault();
-            this.setState({
-              fullScreen: !this.state.fullScreen,
-            });
-          }}
-        >
-          Click to switch fullscreen
-        </a>
-      </div>
-    );
-  }
 
   renderEval() {
     return this.state.location === 'idx' ? (
@@ -52,6 +26,7 @@ class MainLayout extends React.Component {
     ) : (
         <Evaluation></Evaluation>
       );
+      /*<EvaluationResult></EvaluationResult> */
   }
 
   renderRelationship() {
@@ -99,8 +74,8 @@ class MainLayout extends React.Component {
             }}
             data-seed="logId1"
           >
-           <BigBox></BigBox>
-            {/*this.renderEval()*/}
+           
+            {this.renderEval()}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -144,7 +119,7 @@ class MainLayout extends React.Component {
               });
             }}
           >
-            {this.renderContent('个人中心')}
+            <PersonCenter/>
           </TabBar.Item>
         </TabBar>
       </div>

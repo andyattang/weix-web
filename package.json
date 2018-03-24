@@ -14,6 +14,8 @@
   "devDependencies": {
     "antd-mobile": "^2.1.6",
     "babel-plugin-dva-hmr": "^0.3.2",
+    "echarts": "^4.0.4",
+    "echarts-for-react": "^2.0.8",
     "eslint": "^4.14.0",
     "eslint-config-umi": "^0.1.1",
     "eslint-plugin-flowtype": "^2.34.1",

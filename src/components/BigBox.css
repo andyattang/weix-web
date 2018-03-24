@@ -4,10 +4,16 @@
   word-wrap:break-word;
 }
 .content{
-  height: 50px;
   width: 100%;
   word-wrap:break-all;
   text-overflow:ellipsis;
   overflow:hidden;
-  font-size: 13px;
+}
+
+.title{
+  width: 100%;
+  word-wrap:break-all;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  font-size: 14px;
 }

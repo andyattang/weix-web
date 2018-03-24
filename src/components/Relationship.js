@@ -12,12 +12,17 @@ const selectFriend = () => {
 const Relationship = () => {
     return (
         <div id="relationBox" className={styles.main}>
+            <div style={{
+                fontSize: '20px', color: '#FFFFFF'
+                , marginTop: '40px'
+            }}>想知道和身边的人关系如何？<br />
+                点击头像添加测试</div>
             <div class={styles.center}>
                 <div class={styles.me}>
-                    <CircleIcon src="/static/person.png"></CircleIcon>
+                    <CircleIcon radius="60px" src="/static/weixin.png"></CircleIcon>
                 </div>
                 <div class={styles.friend}>
-                    <a href="/#/friend"><CircleIcon src="/static/person-add.png"></CircleIcon></a>
+                    <a href="/#/friend"><CircleIcon radius="60px" src="/static/person-add.png"></CircleIcon></a>
                 </div>
             </div>
         </div>
