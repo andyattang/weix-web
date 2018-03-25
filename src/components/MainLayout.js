@@ -19,23 +19,40 @@ class MainLayout extends React.Component {
     };
   }
 
-
-  renderEval() {
-    return this.state.location === 'idx' ? (
-      <StartEvaluation></StartEvaluation>
-    ) : (
-        <Evaluation></Evaluation>
-      );
-      /*<EvaluationResult></EvaluationResult> */
+  renderTab(tabName) {
+    if(tabName !== this.state.selectedTab){
+      return (<div></div>);
+    }
+    switch (this.state.selectedTab) {
+      case 'evlTab':
+        switch (this.state.location) {
+          case 'idx':
+            return (<StartEvaluation></StartEvaluation>);
+          case 'eval':
+            return (<Evaluation></Evaluation>);
+          case 'result':
+            return (<EvaluationResult></EvaluationResult>);
+          default:
+        }
+      case 'friendTab':
+      switch (this.state.location) {
+        case 'idx':
+          return (<Relationship></Relationship>);
+        case 'select':
+          return (<SelectFriend></SelectFriend>);
+        default:
+      }
+      case 'myTab':
+      switch (this.state.location) {
+        case 'idx':
+          return (<PersonCenter />);
+        default:
+      }
+      default:
+        return (<div></div>);
+    }
   }
-
-  renderRelationship() {
-    return this.state.location === 'idx' ? (
-      <Relationship></Relationship>
-    ) : (
-        <SelectFriend></SelectFriend>
-      );
-  }
+ 
 
   render() {
     return (
@@ -74,8 +91,8 @@ class MainLayout extends React.Component {
             }}
             data-seed="logId1"
           >
-           
-            {this.renderEval()}
+
+            {this.renderTab('evlTab')}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -105,7 +122,7 @@ class MainLayout extends React.Component {
               });
             }}
           >
-            {this.renderRelationship()}
+            {this.renderTab('friendTab')}
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
@@ -116,10 +133,11 @@ class MainLayout extends React.Component {
             onPress={() => {
               this.setState({
                 selectedTab: 'myTab',
+                location: 'idx'
               });
             }}
           >
-            <PersonCenter/>
+            {this.renderTab('myTab')}
           </TabBar.Item>
         </TabBar>
       </div>
@@ -135,4 +153,4 @@ function mapStateToProps(state) {
   return state.MainLayout;
 }
 
-export default connect()(MainLayout);
+export default connect(mapStateToProps)(MainLayout);

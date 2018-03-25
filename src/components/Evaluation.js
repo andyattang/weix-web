@@ -51,10 +51,12 @@ const StartEvaluation = () => {
           e.preventDefault();
           scrollToBottom();
         }} className={styles.button}>有差异</a></div>
-        <div className={styles.rightButton}><a onClick={(e) => {
+        <div className={styles.rightButton}><a 
+        /*onClick={(e) => {
           e.preventDefault();
           scrollToBottom();
-        }} className={styles.button}>完全一致</a></div>
+        }
+        }*/ href="/#/result" className={styles.button}>完全一致</a></div>
       </div>
     </div>
   );
